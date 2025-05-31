@@ -51,9 +51,21 @@ cd summarization-api
 npm install
 ```
 
-### 4. Setup Prisma & Database
+### 3. Setup Prisma & Database
 
 ```bash
 npx prisma generate
 npx prisma migrate dev --name init
 ```
+
+## 🔚 Endpoint API
+### 🔒 Auth Routes
+- POST `/api/auth/register` Register new user  
+- POST `/api/auth/login` Login user  
+- POST `/api/auth/logout` Logout current session  
+- GET `/api/auth/profile` Get current logged-in user info (Authenticated)
+
+### 📄 Summary Routes
+- POST `/api/summary` Submit and save summarized text (Authenticated)  
+- GET `/api/summary` Get all summaries belonging to logged-in user (Authenticated)  
+- GET `/api/summary/{id}` Get specific summary by ID (Authenticated)
