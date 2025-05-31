@@ -43,3 +43,17 @@
 ```bash
 git clone https://github.com/username/summarization-api.git
 cd summarization-api
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Setup Prisma & Database
+
+```bash
+npx prisma generate
+npx prisma migrate dev --name init
+```
